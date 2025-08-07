@@ -2,7 +2,8 @@
 
 A sleek, transparent desktop clock widget built for [Eww (ElKowars wacky widgets)](https://github.com/elkowar/eww). Features a modern design with bold typography and clean aesthetics perfect for any desktop setup.
 
-![Modern Clock Widget Preview](preview.png)
+<img width="1680" height="1050" alt="image" src="https://github.com/user-attachments/assets/a46a43ea-1a8b-4332-9e74-d6f860e49890" />
+
 
 ## ✨ Features
 
