@@ -28,7 +28,7 @@ A sleek, transparent desktop clock widget built for [Eww (ElKowars wacky widgets
 ### 🔧 Prerequisites
 
 - [Eww](https://github.com/elkowar/eww) installed and configured
-- Optional: [Anurati font](https://www.behance.net/gallery/19532783/Anurati-Free-Font) for optimal typography
+- Optional: [Anurati font](https://befonts.com/anurati-font.html) for optimal typography (you can find it in the repository)
 
 ### ⚙️ Setup
 
