@@ -1,0 +1,44 @@
+// Modern Transparent Clock Widget Styles
+
+.clock-container {
+  background: transparent;
+  border: none;
+  padding: 16px;
+  box-shadow: none;
+}
+
+.day {
+  font-family: 'Anurati', 'Impact', 'Arial Black', sans-serif;
+  font-size: 100px;
+  font-weight: 400;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  letter-spacing: 36px;
+}
+
+.clock-date {
+  font-family: 'Poppins', 'Roboto', 'Inter', sans-serif;
+  font-size: 20px;
+  background: none;
+  font-weight: 500;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  letter-spacing: 1px;
+}
+
+.time {
+  font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  letter-spacing: 1px;
+  margin-top: 8px;
+}
+
+.day-box,
+.date-box,
+.time-box {
+  margin: 0;
+}
+

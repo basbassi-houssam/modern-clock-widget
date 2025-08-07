@@ -1,0 +1,53 @@
+;; Polls for updating time and date
+
+;; Polls for updating time and date
+(defpoll current-day :interval "60s" "date '+%A' | tr '[:lower:]' '[:upper:]'")
+(defpoll current-date :interval "60s" "date '+~ %d %b %Y ~'")
+(defpoll current-time :interval "1s" "date '+- %I:%M %p -'")
+
+;; Main clock widget
+(defwidget clock []
+  (box :class "clock-container"
+       :orientation "v"
+       :space-evenly false
+       :spacing -4
+    (box :class "day-box"
+         :halign "center"
+      (label :class "day"
+             :text current-day))
+    (box :class "date-box"
+         :halign "center"
+      (label :class "clock-date"
+             :text current-date))
+    (box :class "time-box"
+         :halign "center"
+      (label :class "time"
+             :text current-time))))
+
+;; Window definition
+(defwindow clock-window-0
+  :monitor 0
+  :geometry (geometry :x "20px"
+                      :y "20px"
+                      :width "200px"
+                      :height "120px"
+                      :anchor "center")
+  :stacking "bottom"
+  :reserve (struts :distance "0px" :side "top")
+  :windowtype "desktop"
+  :wm-ignore true
+  (clock))
+
+;; Window definition
+(defwindow clock-window-1
+  :monitor 1
+  :geometry (geometry :x "20px"
+                      :y "20px"
+                      :width "200px"
+                      :height "120px"
+                      :anchor "center")
+  :stacking "bottom"
+  :reserve (struts :distance "0px" :side "top")
+  :windowtype "desktop"
+  :wm-ignore true
+  (clock))
