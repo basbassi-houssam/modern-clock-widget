@@ -2,11 +2,7 @@
 
 A sleek, transparent desktop clock widget built for [Eww (ElKowars wacky widgets)](https://github.com/elkowar/eww). Features a modern design with bold typography and clean aesthetics perfect for any desktop setup.
 
-<img width="1680" height="1050" alt="image" src="https://github.com/user-attachments/assets/cffc5ac6-ea1b-4391-bcac-71d13c47a432" />
-
-
-<img width="1680" height="1050" alt="image" src="https://github.com/user-attachments/assets/57cd00d3-16bf-4119-94e0-b06493acf197" />
-
+![Modern Clock Widget Preview](preview.png)
 
 ## ✨ Features
 
@@ -28,7 +24,7 @@ A sleek, transparent desktop clock widget built for [Eww (ElKowars wacky widgets
 ### 🔧 Prerequisites
 
 - [Eww](https://github.com/elkowar/eww) installed and configured
-- Optional: [Anurati font](https://befonts.com/anurati-font.html) for optimal typography (you can find it in the repository)
+- Optional: [Anurati font](https://www.behance.net/gallery/19532783/Anurati-Free-Font) for optimal typography
 
 ### ⚙️ Setup
 
@@ -40,18 +36,25 @@ A sleek, transparent desktop clock widget built for [Eww (ElKowars wacky widgets
 
 2. Copy the widget files to your eww configuration directory:
    ```bash
-   cp modern-clock.yuck ~/.config/eww/
-   cp modern-clock.scss ~/.config/eww/
+   cp -r modern-clock ~/.config/eww/
    ```
 
-3. If you have an existing `eww.yuck` file, append the contents of `modern-clock.yuck` to it, or include it:
+3. If you have an existing `eww.yuck / eww.scss` file, append the contents of `modern-clock.yuck / modern-clock.scss` to it, or include it:
    ```lisp
-   (include "modern-clock.yuck")
+   (include "modern-clock/modern-clock.yuck")
    ```
 
 4. Import the styles in your main SCSS file:
    ```scss
-   @import "modern-clock.scss";
+   @import "modern-clock/modern-clock.scss";
+   ```
+
+5. **Optional but recommended**: Install the Anurati font for optimal appearance:
+   ```bash
+   # Download Anurati-Regular.otf and place it in your fonts directory
+   mkdir -p ~/.local/share/fonts 	# Make it only if it doesn't exist'
+   cp Anurati-Regular.otf ~/.local/share/fonts/		# Copy all fonts to the fonts folder
+   fc-cache -fv 	# To scans the font directories on the system
    ```
 
 ## 🚀 Usage
@@ -61,12 +64,9 @@ A sleek, transparent desktop clock widget built for [Eww (ElKowars wacky widgets
 Start the clock widget with:
 ```bash
 eww ~/path/to/eww open clock-window-0
+eww ~/path/to/eww open clock-window-1		# For second monitor
 ```
 
-For dual monitor setup:
-```bash
-eww ~/path/to/eww open clock-window-0 clock-window-1
-```
 
 ### 🔄 Auto-start on Boot
 
@@ -75,11 +75,13 @@ Add to your window manager's autostart configuration:
 **i3/sway config:**
 ```
 exec eww ~/path/to/eww open clock-window-0
+exec eww ~/path/to/eww open clock-window-1		# For second monitor
 ```
 
 **Hyprland:**
 ```
 exec-once = eww ~/path/to/eww open clock-window-0
+exec-once = eww ~/path/to/eww open clock-window-1		# For second monitor
 ```
 
 ## 🎨 Customization
@@ -140,11 +142,32 @@ Customize the date and time format by modifying the date commands:
 ## 📁 File Structure
 
 ```
-modern-clock/
-├── modern-clock.yuck    # Widget definition and logic
-├── modern-clock.scss    # Styling and appearance
-├── README.md           # This file
-└── preview.png         # Widget preview (add your own)
+modern-clock-widget/
+├── modern-clock
+│   ├── modern-clock.scss
+│   └── modern-clock.yuck
+├── Poppins
+│		├── Anurati-Regular.otf
+│		├── Poppins-BlackItalic.ttf
+│		├── Poppins-Black.ttf
+│		├── Poppins-BoldItalic.ttf
+│		├── Poppins-Bold.ttf
+│		├── Poppins-ExtraBoldItalic.ttf
+│		├── Poppins-ExtraBold.ttf
+│		├── Poppins-ExtraLightItalic.ttf
+│		├── Poppins-ExtraLight.ttf
+│		├── Poppins-Italic.ttf
+│		├── Poppins-LightItalic.ttf
+│		├── Poppins-Light.ttf
+│		├── Poppins-MediumItalic.ttf
+│		├── Poppins-Medium.ttf
+│		├── Poppins-Regular.ttf
+│		├── Poppins-SemiBoldItalic.ttf
+│		├── Poppins-SemiBold.ttf
+│		├── Poppins-ThinItalic.ttf
+│		└── Poppins-Thin.ttf
+├── LICENSE
+└── README.md 
 ```
 
 ## ⚙️ Configuration Details
@@ -161,8 +184,6 @@ modern-clock/
 1. **Day Display**: Anurati (fallback: Impact, Arial Black)
 2. **Date/Time**: Poppins (fallback: Roboto, Inter, system fonts)
 
-## 🛠️ Troubleshooting
-
 ### ❌ Widget Not Appearing
 
 1. Check if eww is running: `eww ping`
@@ -171,10 +192,10 @@ modern-clock/
 
 ### 🔤 Font Issues
 
-If fonts don't display correctly:
-1. Install the Anurati font system-wide
-2. Use the fallback fonts (Impact, Arial Black)
-3. Modify the font-family in the SCSS file
+1. Verify font installation: `fc-list | grep -i anurati`
+2. Sometimes a reboot to the system is needed
+3. Use the fallback fonts (Impact, Arial Black)
+4. Modify the font-family in the SCSS file if needed
 
 ### 🖥️ Multi-Monitor Issues
 
@@ -202,7 +223,8 @@ Feel free to submit issues, feature requests, and pull requests to improve this 
 
 ## 📄 License
 
-[LICENSE]
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
 
 ---
 
