@@ -63,7 +63,7 @@ A sleek, transparent desktop clock widget built for [Eww (ElKowars wacky widgets
    ```bash
    # Download Anurati-Regular.otf and place it in your fonts directory
    mkdir -p ~/.local/share/fonts 	# Make it only if it doesn't exist'
-   cp Anurati-Regular.otf ~/.local/share/fonts/		# Copy all fonts to the fonts folder
+   cp fonts/* ~/.local/share/fonts/		# Copy all fonts to the fonts folder
    fc-cache -fv 	# To scans the font directories on the system
    ```
 
