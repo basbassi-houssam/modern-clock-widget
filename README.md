@@ -2,7 +2,13 @@
 
 A sleek, transparent desktop clock widget built for [Eww (ElKowars wacky widgets)](https://github.com/elkowar/eww). Features a modern design with bold typography and clean aesthetics perfect for any desktop setup.
 
-![Modern Clock Widget Preview](preview.png)
+<img width="1680" height="1050" alt="image" src="https://github.com/user-attachments/assets/e78a1c0a-1db5-4e42-98d4-42a9fe7dca44" />
+
+---
+
+<img width="1680" height="1050" alt="image" src="https://github.com/user-attachments/assets/5041c6ec-e47d-4069-aec0-d97ae2c93635" />
+
+---
 
 ## ✨ Features
 
@@ -39,7 +45,7 @@ A sleek, transparent desktop clock widget built for [Eww (ElKowars wacky widgets
    cp -r modern-clock ~/.config/eww/
    ```
 
-3. If you have an existing `eww.yuck / eww.scss` file, append the contents of `modern-clock.yuck / modern-clock.scss` to it, or include it:
+3. If you have an existing `eww.yuck` file, append the contents of `modern-clock.yuck` to it, or include it:
    ```lisp
    (include "modern-clock/modern-clock.yuck")
    ```
