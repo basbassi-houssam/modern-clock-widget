@@ -156,7 +156,7 @@ modern-clock-widget/
 ├── modern-clock
 │   ├── modern-clock.scss
 │   └── modern-clock.yuck
-├── Poppins
+├── fonts
 │		├── Anurati-Regular.otf
 │		├── Poppins-BlackItalic.ttf
 │		├── Poppins-Black.ttf
