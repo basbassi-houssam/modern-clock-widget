@@ -73,8 +73,8 @@ A sleek, transparent desktop clock widget built for [Eww (ElKowars wacky widgets
 
 Start the clock widget with:
 ```bash
-eww ~/path/to/eww open clock-window-0
-eww ~/path/to/eww open clock-window-1		# For second monitor
+eww ~/.config/eww open clock-window-0
+eww ~/.config/eww open clock-window-1		# For second monitor
 ```
 
 
@@ -84,14 +84,14 @@ Add to your window manager's autostart configuration:
 
 **i3/sway config:**
 ```
-exec eww ~/path/to/eww open clock-window-0
-exec eww ~/path/to/eww open clock-window-1		# For second monitor
+exec eww ~/.config/eww open clock-window-0
+exec eww ~/.config/eww open clock-window-1		# For second monitor
 ```
 
 **Hyprland:**
 ```
-exec-once = eww ~/path/to/eww open clock-window-0
-exec-once = eww ~/path/to/eww open clock-window-1		# For second monitor
+exec-once = eww ~/.config/eww open clock-window-0
+exec-once = eww ~/.config/eww open clock-window-1		# For second monitor
 ```
 
 ## 🎨 Customization
@@ -196,9 +196,9 @@ modern-clock-widget/
 
 ### ❌ Widget Not Appearing
 
-1. Check if eww is running: `eww ping`
-2. Verify widget syntax: `eww reload`
-3. Check logs: `eww logs`
+1. Check if eww is running: `eww "$HOME/.config/eww" ping`
+2. Verify widget syntax: `eww "$HOME/.config/eww" reload`
+3. Check logs: `eww -c "$HOME/.config/eww" logs`
 
 ### 🔤 Font Issues
 
