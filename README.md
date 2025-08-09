@@ -10,6 +10,10 @@ A sleek, transparent desktop clock widget built for [Eww (ElKowars wacky widgets
 
 ---
 
+<img width="1680" height="1050" alt="image" src="https://github.com/user-attachments/assets/ee057ce9-ecfb-4030-bd90-d80fcc9fff17" />
+
+---
+
 ## ✨ Features
 
 - **🔍 Transparent Design** - Seamless integration with any wallpaper
